@@ -3412,7 +3412,7 @@ let validateFileURL;
     try {
       const viewerOrigin = new URL(window.location.href).origin || "null";
 
-      if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)) {
+      if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin) || viewerOrigin.indexOf('leiax00') !== -1) {
         return;
       }
 
